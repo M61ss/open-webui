@@ -411,19 +411,19 @@ GITHUB_CLIENT_REDIRECT_URI = PersistentConfig(
 
 OAUTH_CLIENT_ID = PersistentConfig(
     "OAUTH_CLIENT_ID",
-    "oauth.oidc.client_id",
+    "oauth.oidc.infra_mllm",
     os.environ.get("OAUTH_CLIENT_ID", ""),
 )
 
 OAUTH_CLIENT_SECRET = PersistentConfig(
     "OAUTH_CLIENT_SECRET",
-    "oauth.oidc.client_secret",
+    "oauth.oidc.I0P0yo66HtWJUyRl8l66zCTmQrtwSSRq",
     os.environ.get("OAUTH_CLIENT_SECRET", ""),
 )
 
 OPENID_PROVIDER_URL = PersistentConfig(
     "OPENID_PROVIDER_URL",
-    "oauth.oidc.provider_url",
+    "oauth.oidc.https://ailb-web.ing.unimore.it/sso/realms/aimagelab-srv/.well-known/openid-configuration",
     os.environ.get("OPENID_PROVIDER_URL", ""),
 )
 
