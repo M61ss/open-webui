@@ -430,7 +430,7 @@ OPENID_PROVIDER_URL = PersistentConfig(
 OPENID_REDIRECT_URI = PersistentConfig(
     "OPENID_REDIRECT_URI",
     "oauth.oidc.redirect_uri",
-    os.environ.get("OPENID_REDIRECT_URI", ""),
+    os.environ.get("OPENID_REDIRECT_URI", "/auth/oidc/callback"),
 )
 
 OAUTH_SCOPES = PersistentConfig(
@@ -460,7 +460,7 @@ OAUTH_CODE_CHALLENGE_METHOD = PersistentConfig(
 OAUTH_PROVIDER_NAME = PersistentConfig(
     "OAUTH_PROVIDER_NAME",
     "oauth.oidc.provider_name",
-    os.environ.get("OAUTH_PROVIDER_NAME", "UniMoRe SSO"),
+    os.environ.get("OAUTH_PROVIDER_NAME", "UniMoRe"),
 )
 
 OAUTH_USERNAME_CLAIM = PersistentConfig(
