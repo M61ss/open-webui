@@ -430,7 +430,7 @@ OPENID_PROVIDER_URL = PersistentConfig(
 OPENID_REDIRECT_URI = PersistentConfig(
     "OPENID_REDIRECT_URI",
     "oauth.oidc.redirect_uri",
-    os.environ.get("OPENID_REDIRECT_URI", "/auth/oidc/callback"),
+    os.environ.get("OPENID_REDIRECT_URI", "/oauth/oidc/callback"),
 )
 
 OAUTH_SCOPES = PersistentConfig(
