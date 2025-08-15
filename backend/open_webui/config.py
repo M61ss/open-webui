@@ -300,7 +300,7 @@ JWT_EXPIRES_IN = PersistentConfig(
 ENABLE_OAUTH_SIGNUP = PersistentConfig(
     "ENABLE_OAUTH_SIGNUP",
     "oauth.enable_signup",
-    os.environ.get("ENABLE_OAUTH_SIGNUP", "False").lower() == "true",
+    os.environ.get("ENABLE_OAUTH_SIGNUP", "True").lower() == "true",
 )
 
 
@@ -411,20 +411,20 @@ GITHUB_CLIENT_REDIRECT_URI = PersistentConfig(
 
 OAUTH_CLIENT_ID = PersistentConfig(
     "OAUTH_CLIENT_ID",
-    "oauth.oidc.infra_mllm",
-    os.environ.get("OAUTH_CLIENT_ID", ""),
+    "oauth.oidc.client_id",
+    os.environ.get("OAUTH_CLIENT_ID", "infra_mllm"),
 )
 
 OAUTH_CLIENT_SECRET = PersistentConfig(
     "OAUTH_CLIENT_SECRET",
-    "oauth.oidc.I0P0yo66HtWJUyRl8l66zCTmQrtwSSRq",
-    os.environ.get("OAUTH_CLIENT_SECRET", ""),
+    "oauth.oidc.client_secret",
+    os.environ.get("OAUTH_CLIENT_SECRET", "I0P0yo66HtWJUyRl8l66zCTmQrtwSSRq"),
 )
 
 OPENID_PROVIDER_URL = PersistentConfig(
     "OPENID_PROVIDER_URL",
-    "oauth.oidc.https://ailb-web.ing.unimore.it/sso/realms/aimagelab-srv/.well-known/openid-configuration",
-    os.environ.get("OPENID_PROVIDER_URL", ""),
+    "oauth.oidc.provider_url",
+    os.environ.get("OPENID_PROVIDER_URL", "https://ailb-web.ing.unimore.it/sso/realms/aimagelab-srv/.well-known/openid-configuration"),
 )
 
 OPENID_REDIRECT_URI = PersistentConfig(
@@ -460,7 +460,7 @@ OAUTH_CODE_CHALLENGE_METHOD = PersistentConfig(
 OAUTH_PROVIDER_NAME = PersistentConfig(
     "OAUTH_PROVIDER_NAME",
     "oauth.oidc.provider_name",
-    os.environ.get("OAUTH_PROVIDER_NAME", "SSO"),
+    os.environ.get("OAUTH_PROVIDER_NAME", "UniMoRe SSO"),
 )
 
 OAUTH_USERNAME_CLAIM = PersistentConfig(
